@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import aboutImage1 from '@/public/about-1.jpg';
-import aboutImage2 from '@/public/about-2.jpg';
 
 export const metadata = {
   title: 'About the Wild Oasis',
