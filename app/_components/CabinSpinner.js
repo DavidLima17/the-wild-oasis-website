@@ -1,6 +1,7 @@
+import React from 'react';
 import Spinner from '@/app/_components/Spinner';
 
-export default function Loading() {
+export default function CabinSpinner() {
   return (
     <div className="grid items-center justify-center">
       <Spinner />
