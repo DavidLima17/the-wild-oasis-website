@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
 import CabinsList from '@/app/_components/CabinsList';
-import CabinSpinner from '../_components/CabinSpinner';
-import Filter from '../_components/Filter';
+import Filter from '@/app/_components/Filter';
+import Spinner from '@/app/_components/Spinner';
+import ReservationReminder from '@/app/_components/ReservationReminder';
 
 // export const revalidate = 3600; no longer needed becase the page becomes dynamic with the filter
 // export const revalidate = 15;
@@ -30,8 +31,12 @@ export default function Page({ searchParams }) {
       <div className="flex justify-end mb-8">
         <Filter />
       </div>
-      <Suspense fallback={<CabinSpinner />} key={filter}>
+      <Suspense
+        fallback={<Spinner message="Loading cabin data..." />}
+        key={filter}
+      >
         <CabinsList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );
