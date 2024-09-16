@@ -32,6 +32,7 @@ function DateSelector({ settings, bookedDates, cabin }) {
         mode="range"
         onSelect={setRange}
         selected={range}
+        disabled={{ before: new Date() }}
         min={minBookingLength + 1}
         max={maxBookingLength}
         fromMonth={new Date()}
