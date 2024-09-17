@@ -1,18 +1,18 @@
-import { Suspense } from 'react';
-import CabinsList from '@/app/_components/CabinsList';
-import Filter from '@/app/_components/Filter';
-import Spinner from '@/app/_components/Spinner';
-import ReservationReminder from '@/app/_components/ReservationReminder';
+import CabinsList from "@/app/_components/CabinsList";
+import Filter from "@/app/_components/Filter";
+import ReservationReminder from "@/app/_components/ReservationReminder";
+import Spinner from "@/app/_components/Spinner";
+import { Suspense } from "react";
 
 // export const revalidate = 3600; no longer needed becase the page becomes dynamic with the filter
 // export const revalidate = 15;
 
 export const metadata = {
-  title: 'Cabins',
+  title: "Cabins",
 };
 
 export default function Page({ searchParams }) {
-  const filter = searchParams?.capacity ?? 'all';
+  const filter = searchParams?.capacity ?? "all";
 
   return (
     <div>

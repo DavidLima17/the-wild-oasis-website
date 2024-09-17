@@ -1,19 +1,19 @@
-import { Josefin_Sans } from 'next/font/google';
-import '@/app/_styles/globals.css';
-import Header from '@/app/_components/Header';
-import { ReservationProvider } from './_context/ReservationContext';
+import Header from "@/app/_components/Header";
+import "@/app/_styles/globals.css";
+import { Josefin_Sans } from "next/font/google";
+import { ReservationProvider } from "./_context/ReservationContext";
 
 const josefin = Josefin_Sans({
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
   title: {
-    template: '%s / The Wild Oasis',
-    default: 'Welcome / The Wild Oasis',
+    template: "%s / The Wild Oasis",
+    default: "Welcome / The Wild Oasis",
   },
-  description: 'The Wild Oasis is a place to relax and enjoy nature.',
+  description: "The Wild Oasis is a place to relax and enjoy nature.",
 };
 
 export default function RootLayout({ children }) {
@@ -33,4 +33,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

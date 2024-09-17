@@ -8,4 +8,3 @@ function Spinner({ message }) {
 }
 
 export default Spinner;
-

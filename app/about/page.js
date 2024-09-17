@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import aboutImage1 from '@/public/about-1.jpg';
-import { getCabins } from '../_lib/data-service';
+import aboutImage1 from "@/public/about-1.jpg";
+import Image from "next/image";
+import { getCabins } from "../_lib/data-service";
 
 export const revalidate = 86400;
 
 export const metadata = {
-  title: 'About the Wild Oasis',
+  title: "About the Wild Oasis",
 };
 
 export default async function Page() {
